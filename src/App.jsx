@@ -6,7 +6,7 @@ function App() {
   const[products,setProducts] = useState([]);
   const[loading,setLoading] = useState(true);
   const[error,setError] = useState("");
-  const [serarchTerm,setSearchTerm] = useState("");
+  const [searchTerm,setSearchTerm] = useState("");
 
   useEffect(()=>{
     async function loadProducts(){
@@ -39,8 +39,8 @@ function App() {
     products.map((p)=>p.category)
   ).size;
   const filteredProducts = products.filter((product) =>
-    product.title.toLowerCase().includes(serarchTerm.toLowerCase()) ||
-    product.category.toLowerCase().includes(serarchTerm.toLowerCase())
+    product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    product.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   if(loading){
@@ -86,7 +86,7 @@ function App() {
         <input
           type="text"
           placeholder="Search products..."
-          value={serarchTerm}
+          value={searchTerm}
           onChange={(e)=>setSearchTerm(e.target.value)}
           className="search-input"
         />
@@ -104,7 +104,11 @@ function App() {
 
           <tbody>
             {filteredProducts.length === 0 ? (
-              <p className="no-products">No products found.</p>
+              <tr>
+                <td colSpan="5" className="no-products">
+                  No products found.
+                </td>
+              </tr>
             ) : (
               filteredProducts.map((product) => (
                 <tr key={product.id}>
