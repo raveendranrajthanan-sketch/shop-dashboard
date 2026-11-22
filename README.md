@@ -1,16 +1,67 @@
-# React + Vite
+# Shop Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based Shop Dashboard built with Vite. This project fetches product data from the DummyJSON API and displays store statistics and product information.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Fetch products from DummyJSON API
+- Display total number of products
+- Display total product categories
+- Calculate low-stock products (stock below 10)
+- Search products by name or category
+- Display product details in a table
+- Loading, error, and empty states
+- Responsive dashboard design
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- JavaScript
+- CSS
+- Fetch API
+- DummyJSON REST API
 
-## Expanding the ESLint configuration
+## API Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+`https://dummyjson.com/products?limit=0`
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/raveendranrajthanan-sketch/shop-dashboard.git
+   ```
+
+2. Open the project folder:
+
+   ```bash
+   cd shop-dashboard
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+## Dashboard Statistics
+
+- Total Products: 194
+- Total Categories: 24
+- Low Stock Products: 25
+
+## GitHub Repository
+
+https://github.com/raveendranrajthanan-sketch/shop-dashboard
+
+## Author
+
+Raveendran Rajthanan
